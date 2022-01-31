@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import axios from 'axios';
+  // import axios from 'axios';
   // import { toJson } from './helpers/youtubeHelper.js';
 
   // Main styles
