@@ -24,15 +24,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-    - name: Build 🏗️
-      run: yarn run build
+      - name: Build 🏗️
+        run: yarn run build
 
   deploy:
     runs-on: ubuntu-latest
     need: build
     if: github.ref == 'refs/heads/main'
     steps:
-    - name: Deploy 🚚
-      run: echo "wip"
+      - name: Deploy 🚚
+        run: echo "wip"
 
       
