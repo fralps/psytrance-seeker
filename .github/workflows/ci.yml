@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+      - uses: actions/checkout@v2
+
+      - name: Install modules 🔧
+        run: yarn install
+
+      - name: Run ESLint 🧐
+        run: yarn run eslint . --ext .js,.svelte
+
+      - name: Results ✅
+        run: echo "Done ✅"
+
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: Build 🏗️
+      run: yarn run build
+
+  deploy:
+    runs-on: ubuntu-latest
+    need: build
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: Deploy 🚚
+      run: echo "wip"
+
+      
