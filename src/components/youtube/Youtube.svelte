@@ -2,16 +2,13 @@
   import axios from 'axios';
   import Card from './Card.svelte';
 
-  let searchTerm;
   let videos = [];
 
  const fetchYoutubeList = async () => {
     const searchQuery = 'psytrance';
-    const maxResults = 10;
+    const maxResults = 5;
     const apiKey = import.meta.env.VITE_APP_YOUTUBE_API_KEY;
     const apiBaseUrl = import.meta.env.VITE_APP_API_BASE_URL;
-
-    searchTerm = searchQuery;
 
     await axios.get(`${apiBaseUrl}`, {
       params: {
@@ -38,7 +35,7 @@
 
   <div class="text-center grid grid-cols-3 gap-4">
     {#each videos as video }
-      <Card video={video} searchTerm={searchTerm} />
+      <Card video={video} />
     {/each}
   </div>
 </section>
