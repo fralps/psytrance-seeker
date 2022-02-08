@@ -1,3 +1,7 @@
 {
-  "page_title": "Did somebody say psytrance?"
+  "page_banner": "💊 Welcome to psytrance-seeker 💊",
+  "page_title": "Did somebody say psytrance?",
+  "page_description": "It's Friday and you're wondering if it's time for some psytrance in the office? You're in the right place! On the right you will find the latest psytrance searches from Youtube 💃🏻",
+  "page_footer": "Made in Lyon ❤️",
+  "api_error": "Oops, too many API requests 🔁. Please try again later."
 }

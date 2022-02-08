@@ -1,11 +1,20 @@
 <script>
+  import { onMount } from 'svelte';
+  import { wordsList } from '../../constants/wordsList.js';
+  import { t } from '../../services/i18n/i18n';
   import axios from 'axios';
   import Card from './Card.svelte';
 
-  let videos = [];
+  const youtubeVideoUrl = 'https://www.youtube.com/watch?v=';
 
- const fetchYoutubeList = async () => {
-    const searchQuery = 'psytrance';
+  let videos = [];
+  let isFetchingVideos = false;
+  let isErrorPresent = false;
+  let searchTerm = wordsList[Math.floor(Math.random() * wordsList.length)];
+  
+  onMount(async () => {
+    isFetchingVideos = true;
+    const searchQuery = searchTerm;
     const maxResults = 5;
     const apiKey = import.meta.env.VITE_APP_YOUTUBE_API_KEY;
     const apiBaseUrl = import.meta.env.VITE_APP_API_BASE_URL;
@@ -21,21 +30,47 @@
     })
       .then(response => {
         videos = response.data.items;
+        isFetchingVideos = false;
+      })
+      .catch(() => {
+        isFetchingVideos = false;
+        isErrorPresent = true;
       });
-  };
+	});
 </script>
 
-<section class="container">
-  <button
-    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
-    on:click|once={fetchYoutubeList}
-  >
-    Bring me joy
-  </button>
-
-  <div class="text-center grid grid-cols-3 gap-4">
-    {#each videos as video }
-      <Card video={video} />
-    {/each}
+<section class="mt-4">
+  <div class="flex flex-col items-center mr-4">
+    {#if isFetchingVideos}
+      <div class="rotating text-6xl">
+        💊
+      </div>
+    {:else}
+      {#if isErrorPresent}
+        <div class="text-sm text-center">{$t('api_error')}</div>
+      {:else}
+        {#each videos as video }
+          <a href={`${youtubeVideoUrl}${video.id.videoId}`} target="_blank" class="w-full">
+            <Card video={video} />
+          </a>
+        {/each}
+      {/if}
+    {/if}
   </div>
 </section>
+
+<style>
+  @keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  .rotating {
+    animation: rotating 2s linear infinite;
+  }
+</style>
