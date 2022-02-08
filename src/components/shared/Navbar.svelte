@@ -8,7 +8,7 @@
         return `🇫🇷 ${locale}`;
       case 'en':
         return `🇬🇧 ${locale}`;
-    };
+    }
   };
 </script>
 
