@@ -23,7 +23,15 @@
         </h1>
 
         <p class="mt-10 text-center text-lg">
-          { $t('page_description') }
+          { $t('page_description')[0] }
+        </p>
+
+        <p class="mt-10 text-center text-lg">
+          { $t('page_description')[1] }
+        </p>
+
+        <p class="mt-10 text-center text-lg">
+          { $t('page_description')[2] }
         </p>
       </div>
     </div>

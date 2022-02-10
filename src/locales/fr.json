@@ -1,7 +1,11 @@
 {
   "page_banner": "💊 Bienvenue sur psytrance-seeker 💊",
   "page_title": "Quelqu'un a dit psytrance ?",
-  "page_description": "C'est vendredi et vous vous demandez si c'est l'heure de passer de la psytrance au bureau ? Vous êtes au bon endroit ! Sur la droite vous retrouverez les dernières recherches Youtube en terme de psytrance 💃🏻",
+  "page_description": [
+    "C'est vendredi et tu te demandes si c'est l'heure de passer de la psytrance au bureau ?" ,
+    "Tu es au bon endroit mec !",
+    "Sur la droite tu retrouveras les dernières recherches Youtube en terme de psytrance 💃🏻"
+  ],
   "page_footer": "Fait à Lyon ❤️",
-  "api_error": "Oups, trop de requêtes vers l'API 🔁. Veuillez réessayer ultérieurement."
+  "api_error": "Oups, trop de requêtes vers l'API 🔁. C'est l'heure d'aller se coucher..."
 }
