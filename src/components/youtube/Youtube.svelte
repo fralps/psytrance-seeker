@@ -39,7 +39,7 @@
 	});
 </script>
 
-<section class="mt-4">
+<section class="mt-4 test">
   <div class="flex flex-col items-center mr-4">
     {#if isFetchingVideos}
       <div class="rotating text-6xl">
@@ -59,7 +59,9 @@
   </div>
 </section>
 
-<style>
+<style lang="scss">
+  @import '../../assets/styles/variables';
+
   @keyframes rotating {
     from {
       -webkit-transform: rotate(0deg);
