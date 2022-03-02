@@ -1,5 +1,4 @@
 <script>
-  // @ts-ignore
   import { locale, locales } from '@/services/i18n/i18n';
 
   // Change flag depending on locale

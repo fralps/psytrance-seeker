@@ -1,16 +1,16 @@
 <script>
   import { onMount } from 'svelte';
-  import { wordsList } from '../../constants/wordsList.js';
-  import { t } from '../../services/i18n/i18n';
+  import { searchList } from '@/constants/searchList.js';
+  import { t } from '@/services/i18n/i18n';
   import axios from 'axios';
-  import Card from './Card.svelte';
+  import Card from '@/components/youtube/Card.svelte';
 
   const youtubeVideoUrl = 'https://www.youtube.com/watch?v=';
 
   let videos = [];
   let isFetchingVideos = false;
   let isErrorPresent = false;
-  let searchTerm = wordsList[Math.floor(Math.random() * wordsList.length)];
+  let searchTerm = searchList[Math.floor(Math.random() * searchList.length)];
   
   onMount(async () => {
     isFetchingVideos = true;

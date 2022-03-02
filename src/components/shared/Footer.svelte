@@ -1,8 +1,11 @@
 <script>
-  // @ts-ignore
   import { t } from '@/services/i18n/i18n';
 </script>
 
-<section class="text-center fixed bottom-0 w-full pb-4">
-  <p> { $t('page_footer') }</p>
-</section>
+<footer class="relative bg-blueGray-200 pt-8 pb-6">
+  <div
+    class="bottom-auto w-full text-center absolute pointer-events-none overflow-hidden h-20"
+  >
+    <p> { $t('page_footer') }</p>
+  </div>
+</footer>

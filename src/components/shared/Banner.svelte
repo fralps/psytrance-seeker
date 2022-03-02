@@ -1,6 +1,5 @@
 <script>
-  // @ts-ignore
-   import { t } from '@/services/i18n/i18n';
+  import { t } from '@/services/i18n/i18n';
 </script>
 
 <section class="h-20 border-t-4 border-b-4 banner">

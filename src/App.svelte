@@ -1,5 +1,4 @@
 <script>
-  // @ts-ignore
   // Translations service
   import { t } from '@/services/i18n/i18n';
 
