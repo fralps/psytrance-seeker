@@ -1,5 +1,6 @@
 <script>
-  import { locale, locales } from '../../services/i18n/i18n';
+  // @ts-ignore
+  import { locale, locales } from '@/services/i18n/i18n';
 
   // Change flag depending on locale
   const handleFlag = (locale) => {
