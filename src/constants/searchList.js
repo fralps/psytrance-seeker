@@ -8,5 +8,6 @@ export const searchList = [
   'psytrance 2022',
   'acid psytrance',
   'psychedelic psytrance',
-  'oriental psytrance'
+  'oriental psytrance',
+  'neo trance'
 ];

@@ -60,8 +60,6 @@
 </section>
 
 <style lang="scss">
-  @import '../../assets/styles/variables';
-
   @keyframes rotating {
     from {
       -webkit-transform: rotate(0deg);

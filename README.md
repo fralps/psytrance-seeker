@@ -16,6 +16,7 @@ Enjoy the last Youtube video within this random search list:
 - acid psytrance
 - psychedelic psytrance
 - oriental psytrance
+- neo trance
 
 ### Where?
 
@@ -23,7 +24,7 @@ You can enjoy Psytrance Seeker here: https://psytrance-seeker.vercel.app/
 
 ### Contributing
 
-If you want to add some search query, you can do a PR and change this file: `@/constants/searchList.js`
+If you want to add some search query (only psytrance or trance related please), you can do a PR and change this file: `@/constants/searchList.js`
 ```js
 export const searchList = [
   'psytrance',
@@ -35,7 +36,8 @@ export const searchList = [
   'psytrance 2022',
   'acid psytrance',
   'psychedelic psytrance',
-  'oriental psytrance'
+  'oriental psytrance',
+  'neo trance'
 ];
 ```
 

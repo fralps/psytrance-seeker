@@ -21,15 +21,3 @@ jobs:
 
       - name: Results ✅
         run: echo "Done! You can merge now ✅"
-
-  build:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Install modules 🔧
-        run: yarn install
-
-      - name: Build 🏗️
-        run: yarn run build
