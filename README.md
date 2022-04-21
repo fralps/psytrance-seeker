@@ -17,6 +17,7 @@ Enjoy the last Youtube video within this random search list:
 - psychedelic psytrance
 - oriental psytrance
 - neo trance
+- mushroom psytrance
 
 ### Where?
 
