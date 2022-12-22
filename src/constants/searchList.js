@@ -10,5 +10,6 @@ export const searchList = [
   'psychedelic psytrance',
   'oriental psytrance',
   'neo trance',
-  'mushroom psytrance'
+  'mushroom psytrance',
+  'space psytrance'
 ];
