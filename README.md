@@ -18,6 +18,7 @@ Enjoy the last Youtube video within this random search list:
 - oriental psytrance
 - neo trance
 - mushroom psytrance
+- space psytrance
 
 ### Where?
 
@@ -38,7 +39,9 @@ export const searchList = [
   'acid psytrance',
   'psychedelic psytrance',
   'oriental psytrance',
-  'neo trance'
+  'neo trance',
+  'mushroom psytrance',
+  'space psytrance'
 ];
 ```
 
